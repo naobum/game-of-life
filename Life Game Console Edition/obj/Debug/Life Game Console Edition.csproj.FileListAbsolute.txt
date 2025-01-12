@@ -1,0 +1,7 @@
+C:\Users\Artur\source\repos\Life Game\Life Game Console Edition\bin\Debug\Life Game Console Edition.exe.config
+C:\Users\Artur\source\repos\Life Game\Life Game Console Edition\bin\Debug\Life Game Console Edition.exe
+C:\Users\Artur\source\repos\Life Game\Life Game Console Edition\bin\Debug\Life Game Console Edition.pdb
+C:\Users\Artur\source\repos\Life Game\Life Game Console Edition\obj\Debug\Life Game Console Edition.csproj.AssemblyReference.cache
+C:\Users\Artur\source\repos\Life Game\Life Game Console Edition\obj\Debug\Life Game Console Edition.csproj.CoreCompileInputs.cache
+C:\Users\Artur\source\repos\Life Game\Life Game Console Edition\obj\Debug\Life Game Console Edition.exe
+C:\Users\Artur\source\repos\Life Game\Life Game Console Edition\obj\Debug\Life Game Console Edition.pdb
