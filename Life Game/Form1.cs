@@ -17,7 +17,7 @@ namespace Life_Game
         private bool isPaused;
         private Graphics graphics;
         private int resolution;
-        private GameEngine engine;
+        private GameLogic engine;
         public Form1()
         {
             InitializeComponent();
@@ -28,11 +28,12 @@ namespace Life_Game
                 return;
 
             bPause.Enabled = true;
+            bClear.Enabled = true;
             nudResolution.Enabled = false;
             nudDensity.Enabled = false;
             resolution = (int)nudResolution.Value;
 
-            engine = new GameEngine
+            engine = new GameLogic
                 (
                     rows: pictureBox1.Height / resolution,
                     cols: pictureBox1.Width / resolution,
@@ -89,10 +90,15 @@ namespace Life_Game
             nudResolution.Enabled = true;
             nudDensity.Enabled = true;
             bPause.Enabled = false;
+            bClear.Enabled = false;
+        }
+        private void ClearField()
+        {
+
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            engine.NextGeneration();
+            engine.UpdateGeneration();
             DrawCurrentGeneration();
         }
 
@@ -132,6 +138,12 @@ namespace Life_Game
         {
             if (timer1.Enabled) PauseGame();
             else ContinueGame();
+        }
+
+        private void bClear_Click(object sender, EventArgs e)
+        {
+            engine.ClearField();
+            DrawCurrentGeneration();
         }
     }
 }

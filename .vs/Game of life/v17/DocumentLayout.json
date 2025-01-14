@@ -11,16 +11,20 @@
       "RelativeMoniker": "D:0:0:{C032E163-D7A2-43BD-8B17-85620CD8A2EA}|Life Game\\Game of life.csproj|solutionrelative:life game\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Game of life on console.csproj|c:\\users\\artur\\source\\repos\\life game\\life game console edition\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C032E163-D7A2-43BD-8B17-85620CD8A2EA}|Life Game\\Game of life.csproj|c:\\users\\artur\\source\\repos\\life game\\life game\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C032E163-D7A2-43BD-8B17-85620CD8A2EA}|Life Game\\Game of life.csproj|solutionrelative:life game\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Game of life on console.csproj|C:\\Users\\Artur\\source\\repos\\Life Game\\life game console edition\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Game of life on console.csproj|solutionrelative:life game console edition\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Game of life on console.csproj|C:\\Users\\Artur\\source\\repos\\Life Game\\life game console edition\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Game of life on console.csproj|solutionrelative:life game console edition\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Life Game Console Edition.csproj|C:\\Users\\Artur\\source\\repos\\Life Game\\life game console edition\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Life Game Console Edition.csproj|solutionrelative:life game console edition\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Game of life on console.csproj|c:\\users\\artur\\source\\repos\\life game\\life game console edition\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95063782-8D08-4ADB-9A36-98423071EF68}|Life Game Console Edition\\Game of life on console.csproj|solutionrelative:life game console edition\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "GameLogic.cs",
+              "DocumentMoniker": "C:\\Users\\Artur\\source\\repos\\Life Game\\Life Game\\GameLogic.cs",
+              "RelativeDocumentMoniker": "Life Game\\GameLogic.cs",
+              "ToolTip": "C:\\Users\\Artur\\source\\repos\\Life Game\\Life Game\\GameLogic.cs",
+              "RelativeToolTip": "Life Game\\GameLogic.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:44:24.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Artur\\source\\repos\\Life Game\\Life Game Console Edition\\Program.cs",
               "RelativeDocumentMoniker": "Life Game Console Edition\\Program.cs",
@@ -53,7 +70,7 @@
               "RelativeDocumentMoniker": "Life Game\\Form1.cs",
               "ToolTip": "C:\\Users\\Artur\\source\\repos\\Life Game\\Life Game\\Form1.cs",
               "RelativeToolTip": "Life Game\\Form1.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAmwGEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAswJMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T11:50:02.772Z",
               "EditorCaption": ""
@@ -72,20 +89,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "GameLogic.cs",
               "DocumentMoniker": "C:\\Users\\Artur\\source\\repos\\Life Game\\Life Game Console Edition\\GameLogic.cs",
               "RelativeDocumentMoniker": "Life Game Console Edition\\GameLogic.cs",
               "ToolTip": "C:\\Users\\Artur\\source\\repos\\Life Game\\Life Game Console Edition\\GameLogic.cs",
               "RelativeToolTip": "Life Game Console Edition\\GameLogic.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowBYAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAowGMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-23T10:37:37.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Artur\\source\\repos\\Life Game\\Life Game Console Edition\\Program.cs",
               "RelativeDocumentMoniker": "Life Game Console Edition\\Program.cs",

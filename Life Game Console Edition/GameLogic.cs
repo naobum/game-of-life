@@ -22,10 +22,6 @@ namespace Life_Game_Console_Edition
                 for (int y = 0; y < rows; y++)
                     _field[x, y] = random.Next(density) == 0;
         }
-        public GameLogic(bool[,] field) 
-        {
-            
-        }
         public void UpdateGeneration()
         {
             var newField = new bool[_cols, _rows];
@@ -95,6 +91,12 @@ namespace Life_Game_Console_Edition
         public void RemoveCell(int x, int y)
         {
             UpdateCell(x, y, state: false);
+        }
+        public void ClearField()
+        {
+            for (int i = 0; i < _cols; i++)
+                for (int j = 0; j < _rows; j++)
+                    _field[i, j] = false;
         }
     }
 }
