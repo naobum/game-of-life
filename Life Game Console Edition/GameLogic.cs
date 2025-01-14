@@ -9,48 +9,52 @@ namespace Life_Game_Console_Edition
     public class GameLogic
     {
         public uint CurrentGeneration { get; private set; }
-        private bool[,] field;
-        private readonly int rows, cols;
+        private bool[,] _field;
+        private readonly int _rows, _cols;
 
         public GameLogic(int cols, int rows, int density)
         {
-            this.cols = cols;
-            this.rows = rows;
-            field = new bool[cols, rows];
+            _cols = cols;
+            _rows = rows;
+            _field = new bool[cols, rows];
             Random random = new Random();
             for (int x = 0; x < cols; x++)
                 for (int y = 0; y < rows; y++)
-                    field[x, y] = random.Next(density) == 0;
+                    _field[x, y] = random.Next(density) == 0;
+        }
+        public GameLogic(bool[,] field) 
+        {
+            
         }
         public void UpdateGeneration()
         {
-            var newField = new bool[cols, rows];
+            var newField = new bool[_cols, _rows];
 
-            for (int x = 0; x < cols; x++)
+            for (int x = 0; x < _cols; x++)
             {
-                for (int y = 0; y < rows; y++)
+                for (int y = 0; y < _rows; y++)
                 {
                     var neighboursCount = CountNeighbours(x, y);
-                    var hasLife = field[x, y];
+                    var hasLife = _field[x, y];
 
                     if (!hasLife && neighboursCount == 3)
                         newField[x, y] = true;
                     else if (hasLife && (neighboursCount < 2 || neighboursCount > 3))
                         newField[x, y] = false;
                     else
-                        newField[x, y] = field[x, y];
+                        newField[x, y] = _field[x, y];
                 }
             }
-            field = newField;
+            _field = newField;
             CurrentGeneration++;
         }
 
         public bool[,] GetCurrentGeneration()
         {
-            bool[,] result = new bool[cols, rows];
-            for (int x = 0; x < cols; x++)
-                for (int y = 0; y < rows; y++)
-                    result[x, y] = field[x, y];
+            bool[,] result = new bool[_cols, _rows];
+            for (int x = 0; x < _cols; x++)
+                for (int y = 0; y < _rows; y++)
+                    result[x, y] = _field[x, y];
             return result;
         }
 
@@ -62,10 +66,10 @@ namespace Life_Game_Console_Edition
             {
                 for (int j = -1; j < 2; j++)
                 {
-                    int col = (x + i + cols) % cols;
-                    int row = (y + j + rows) % rows;
+                    int col = (x + i + _cols) % _cols;
+                    int row = (y + j + _rows) % _rows;
                     bool isSelfChecking = col == x && row == y;
-                    bool hasLife = field[col, row];
+                    bool hasLife = _field[col, row];
 
                     if (hasLife && !isSelfChecking)
                         count++;
@@ -75,13 +79,13 @@ namespace Life_Game_Console_Edition
         }
         private bool ValidateCellPosition(int x, int y)
         {
-            return x > 0 && y > 0 && x < cols && y < rows;
+            return x > 0 && y > 0 && x < _cols && y < _rows;
         }
 
         private void UpdateCell(int x, int y, bool state)
         {
             if (ValidateCellPosition(x, y))
-                field[x, y] = state;
+                _field[x, y] = state;
         }
 
         public void AddCell(int x, int y)

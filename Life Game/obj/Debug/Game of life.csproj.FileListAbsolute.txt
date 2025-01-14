@@ -1,0 +1,10 @@
+C:\Users\Artur\source\repos\Life Game\Life Game\bin\Debug\Life Game.exe.config
+C:\Users\Artur\source\repos\Life Game\Life Game\bin\Debug\Life Game.exe
+C:\Users\Artur\source\repos\Life Game\Life Game\bin\Debug\Life Game.pdb
+C:\Users\Artur\source\repos\Life Game\Life Game\obj\Debug\Game of life.csproj.AssemblyReference.cache
+C:\Users\Artur\source\repos\Life Game\Life Game\obj\Debug\Life_Game.Form1.resources
+C:\Users\Artur\source\repos\Life Game\Life Game\obj\Debug\Life_Game.Properties.Resources.resources
+C:\Users\Artur\source\repos\Life Game\Life Game\obj\Debug\Game of life.csproj.GenerateResource.cache
+C:\Users\Artur\source\repos\Life Game\Life Game\obj\Debug\Game of life.csproj.CoreCompileInputs.cache
+C:\Users\Artur\source\repos\Life Game\Life Game\obj\Debug\Life Game.exe
+C:\Users\Artur\source\repos\Life Game\Life Game\obj\Debug\Life Game.pdb

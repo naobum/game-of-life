@@ -14,19 +14,20 @@ namespace Life_Game
 {
     public partial class Form1 : Form
     {
+        private bool isPaused;
         private Graphics graphics;
         private int resolution;
         private GameEngine engine;
         public Form1()
         {
             InitializeComponent();
-
         }
         private void StartGame()
         {
-            if (timer1.Enabled) 
+            if (timer1.Enabled || isPaused) 
                 return;
-            
+
+            bPause.Enabled = true;
             nudResolution.Enabled = false;
             nudDensity.Enabled = false;
             resolution = (int)nudResolution.Value;
@@ -44,7 +45,7 @@ namespace Life_Game
             graphics = Graphics.FromImage(pictureBox1.Image);
             timer1.Start();
         }
-        private void DrawNextGeneration()
+        private void DrawCurrentGeneration()
         {         
             graphics.Clear(Color.DarkBlue);
 
@@ -60,21 +61,39 @@ namespace Life_Game
             }
             pictureBox1.Refresh();
             Text = $"Generation {engine.CurrentGeneration}";
-            engine.NextGeneration();
         }
         
+        private void PauseGame()
+        {
+            isPaused = true;
+            bStart.Enabled = false;
+            bStop.Enabled = false;
+            timer1.Enabled = false;
+            bPause.Text = "Continue";
+        }
+        private void ContinueGame()
+        {
+            isPaused = false;
+            bStart.Enabled = true;
+            bStop.Enabled = true;
+            timer1.Enabled = true;
+            bPause.Text = "Pause";
+        }
 
         private void StopGame()
         {
-            if (!timer1.Enabled)
+            if (!timer1.Enabled && !isPaused)
                 return;
+            isPaused = false;
             timer1.Stop();
             nudResolution.Enabled = true;
             nudDensity.Enabled = true;
+            bPause.Enabled = false;
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DrawNextGeneration();
+            engine.NextGeneration();
+            DrawCurrentGeneration();
         }
 
         private void bStart_Click(object sender, EventArgs e)
@@ -89,6 +108,8 @@ namespace Life_Game
                 var x = e.Location.X / resolution;
                 var y = e.Location.Y / resolution;
                 engine.AddCell(x, y);
+                if (!timer1.Enabled)
+                    DrawCurrentGeneration();
             }
 
             if (e.Button == MouseButtons.Right)
@@ -96,6 +117,8 @@ namespace Life_Game
                 var x = e.Location.X / resolution;
                 var y = e.Location.Y / resolution;   
                 engine.RemoveCell(x, y);
+                if (!timer1.Enabled)
+                    DrawCurrentGeneration();
             }
         }
 
@@ -103,6 +126,12 @@ namespace Life_Game
         private void bStop_Click(object sender, EventArgs e)
         {
             StopGame();
+        }
+
+        private void bPause_Click(object sender, EventArgs e)
+        {
+            if (timer1.Enabled) PauseGame();
+            else ContinueGame();
         }
     }
 }
